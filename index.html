@@ -26,6 +26,8 @@
     <script src="jQuery/jquery-2.1.1.min.js">
     </script>
 
+    <!-- Content Delivery Networks, not used in case they ever go down. -->
+
     <!-- Bootstrap Style CDN 3.3.6 -->
     <!-- <link crossorigin="anonymous" href=
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -50,7 +52,9 @@
 </head>
 <body>
     <div class="container">
-        <h2>D3 Node Tree</h2>
+        <h2>D3 Node Tree Example</h2>
+        <p>Made using <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://d3js.org/">D3</a>, and <a href="https://jquery.com/">jQuery</a>.<br>
+        See code here: <a href="https://github.com/miwi0617/d3NodeTree">https://github.com/miwi0617/d3NodeTree</a></p>
         <div style="border-style: solid; padding: 15px; text-align: center;">
             <input class="btn btn-default" id="show_button" style=
             "color: transparent;text-shadow: 0 0 0 black;" value="Show All">
@@ -60,11 +64,12 @@
             "showWeb()">Show Web</button> <button class="btn btn-success"
             onclick="showPython()">Show Python</button> <button class=
             "btn btn-danger" onclick="showRuby()">Show Ruby</button>
-            <div id="body1"></div>
-            <h4 align="right">Made using Bootstrap, D3, and jQuery</h4>
-            <h4 align="right">See code here: https://github.com/miwi0617/d3NodeTree</h4>
+            <!-- Load the JSON data into the Node Tree, called from nodeTree.js -->
+            <div id="displayNodeTree"></div>
         </div>
     </div>
+
+    <!-- Optimize the page loading time by placing javaScript functions at the bottom of the body tag. JavaScript libraries are loaded in the head tag. -->
 
     <!-- Toggle Show All/Root Button -->
     <script src="js/toggleButton.js" type="text/javascript"></script>
